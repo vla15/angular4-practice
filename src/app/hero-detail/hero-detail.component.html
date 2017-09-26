@@ -1,13 +1,15 @@
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
   <div><label>id: </label>{{hero.id}}</div>
-  <div><label>stats </label></div>
-  <div>
-  <label>str: {{hero.attributes.str}}</label>
-  <label>agi: {{hero.attributes.agi}}</label>
-  <label>dex: {{hero.attributes.dex}}</label>
-  <label>int: {{hero.attributes.int}}</label>
-  <label>sta: {{hero.attributes.sta}}</label>
+  <label>stats </label>
+  <div class="stats-box">
+    <div class="stats-details">
+    <label>str: {{hero.attributes.str}}</label>
+    <label>agi: {{hero.attributes.agi}}</label>
+    <label>dex: {{hero.attributes.dex}}</label>
+    <label>int: {{hero.attributes.int}}</label>
+    <label>sta: {{hero.attributes.sta}}</label>
+    </div>
   </div>
   <div>
     <label>name: </label>
