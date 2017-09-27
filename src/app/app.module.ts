@@ -9,8 +9,7 @@ import { HeroService } from './services/hero.service';
 import { HeroComponent } from './hero/hero.component';
 
 
-const appRoutes = [
-  { path: 'crisis-center', component: 'CrisisListComponent'},
+const appRoutes: Routes = [
   { path: 'hero/:id', component: HeroDetailComponent },
   { 
     path: 'heroes',
@@ -32,7 +31,11 @@ const appRoutes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    )
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
