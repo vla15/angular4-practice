@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
-  { path: 'hero/:id', component: HeroDetailComponent },
+  { path: 'detail/:id', component: HeroDetailComponent },
   { 
     path: 'heroes',
     component: HeroComponent,

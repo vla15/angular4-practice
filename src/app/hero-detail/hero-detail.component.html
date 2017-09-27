@@ -3,16 +3,15 @@
   <div><label>id: </label>{{hero.id}}</div>
   <label>stats </label>
   <div class="stats-box">
-    <div class="stats-details">
-    <label>str: {{hero.attributes.str}}</label>
-    <label>agi: {{hero.attributes.agi}}</label>
-    <label>dex: {{hero.attributes.dex}}</label>
-    <label>int: {{hero.attributes.int}}</label>
-    <label>sta: {{hero.attributes.sta}}</label>
-    </div>
+    <label class="stats">str: {{hero.attributes.str}}</label>
+    <label class="stats">agi: {{hero.attributes.agi}}</label>
+    <label class="stats">dex: {{hero.attributes.dex}}</label>
+    <label class="stats">int: {{hero.attributes.int}}</label>
+    <label class="stats">sta: {{hero.attributes.sta}}</label>
   </div>
   <div>
     <label>name: </label>
     <input [(ngModel)]="hero.name" placeholder="name"/>
   </div>
+  <button (click)="goBack()">Back</button>
 </div>
