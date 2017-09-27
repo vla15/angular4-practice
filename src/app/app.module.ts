@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { HeroComponent } from './hero/hero.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     AppComponent,
     UserComponent,
     HeroDetailComponent,
-    HeroComponent
+    HeroComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
