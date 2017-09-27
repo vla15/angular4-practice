@@ -18,9 +18,10 @@ const appRoutes: Routes = [
     data: { title: 'Heroes List' }
   },
   { path: '',
-    redirectTo: '/heroes',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   },
+  { path: 'dashboard', component: DashboardComponent }
 ]
 
 @NgModule({
