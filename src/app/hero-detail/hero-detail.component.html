@@ -1,13 +1,27 @@
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
-  <div><label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>id:
+      <label class="stat">{{hero.id}}</label> 
+    </label>
+  </div>
   <label>stats </label>
-  <div class="stats-box">
-    <label class="stats">str: {{hero.attributes.str}}</label>
-    <label class="stats">agi: {{hero.attributes.agi}}</label>
-    <label class="stats">dex: {{hero.attributes.dex}}</label>
-    <label class="stats">int: {{hero.attributes.int}}</label>
-    <label class="stats">sta: {{hero.attributes.sta}}</label>
+  <div class="stats-main">
+    <label class="stats-box">str: 
+      <label class="stat">{{hero.attributes.str}}</label>
+    </label>
+    <label class="stats-box">agi: 
+      <label class="stat">{{hero.attributes.agi}}</label>
+    </label>
+    <label class="stats-box">dex: 
+      <label class="stat">{{hero.attributes.dex}}</label>
+    </label>
+    <label class="stats-box">int: 
+      <label class="stat">{{hero.attributes.int}}</label>
+    </label>
+    <label class="stats-box">sta: 
+      <label class="stat">{{hero.attributes.sta}}</label>
+    </label>
   </div>
   <div>
     <label>name: </label>

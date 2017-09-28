@@ -1,9 +1,20 @@
+.stats-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stat {
+  text-align: right;
+}
+
 label {
   display: inline-block;
-  width: 3em;
+  width: 49%;
   margin: .5em 0;
   color: #607D8B;
   font-weight: bold;
+  border: 1px black solid;
 }
 input {
   height: 2em;
