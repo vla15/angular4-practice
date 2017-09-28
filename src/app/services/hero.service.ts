@@ -10,14 +10,19 @@ export class HeroService {
   private heroesUrl = 'api/heroes';
 
   constructor(private http: Http) { }
-  getHeroes(): Promise<Hero[]> {
-    return Promise.resolve(HEROES);
-  }
 
   private handleError(error: any): Promise<any> {
     console.error('An error has occurred', error);
     return Promise.reject(error.message || error);
   }
+
+  getHeroes(): Promise<Hero[]> {
+    return this.http.get(this.heroesUrl)
+      .toPromise()
+      .then(response => response.json().data as Hero[])
+      .catch(this.handleError)
+  }
+
 
   getHero(id: number): Promise<Hero> {
     const url = `${this.heroesUrl}/${id}`;
