@@ -16,8 +16,7 @@ import { Hero } from '../hero';
 @Component({
   selector: 'hero-search',
   templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.css'],
-  providers: [HeroSearchService]
+  styleUrls: ['./hero-search.component.css']
 })
 export class HeroSearchComponent implements OnInit {
   heroes: Observable<Hero[]>;
@@ -36,7 +35,6 @@ export class HeroSearchComponent implements OnInit {
       .debounceTime(300)
       .distinctUntilChanged()
       .switchMap(term => {
-        console.log(this.heroSearchService.search(term));
         return term ? this.heroSearchService.search(term) : Observable.of<Hero[]>([])
       })
       .catch(error => {
