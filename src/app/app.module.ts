@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
+import { HeroSearchService } from './services/hero-search.service';
 import { HeroComponent } from './hero/hero.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './routing/routing.module';
@@ -31,7 +32,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     HttpModule
   ],
-  providers: [HeroService],
+  providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
