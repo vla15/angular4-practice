@@ -1,11 +1,10 @@
 <div *ngIf="hero" class="main-box">
-  <h2>{{hero.name}} details!</h2>
+  <h2>{{hero.name}} stats</h2>
   <div>
     <label>id:
-      <label class="stat">{{hero.id}}</label> 
+      <label>{{hero.id}}</label> 
     </label>
   </div>
-  <label>stats </label>
   <div class="stats-main">
     <label class="stats-box">str: 
       <label class="stat">{{hero.attributes.str}}</label>
@@ -24,8 +23,9 @@
     </label>
   </div>
   <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name"/>
+    <label>
+      name: <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
   </div>
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
